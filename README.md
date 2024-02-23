@@ -4,7 +4,7 @@
 
 <p align="center">
 	<b><i>Integrated Web Application</i></b><br>
-	<img src="./system ATM.png">
+	<img src="./images/logo_bg.png" width ="200rem">
 </p>
 
 

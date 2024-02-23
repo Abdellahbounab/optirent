@@ -15,13 +15,13 @@
 
 > Development of a web-based integrated management application for optician practices, including appointment scheduling, order management, client records, inventory, billing, and administration of information for leasing cabinets.
 
--Appointment Management
--Order Management
--Client Records Management
--Inventory Management
--Billing Management
--Leasing Cabinet Administration
--Front-End Website Creation
+-Appointment Management<br>
+-Order Management<br>
+-Client Records Management<br>
+-Inventory Management<br>
+-Billing Management<br>
+-Leasing Cabinet Administration<br>
+-Front-End Website Creation<br>
 
 This project has been an opportunity for me to learn and apply my programming skills, as well as to tackle technical challenges. I am aware that this program may have bugs or errors, but I have done my best to test and debug it.
 

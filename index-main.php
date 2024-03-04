@@ -67,8 +67,6 @@ if (isset($mdp))
 		redirection("categorie/categorie-list.php");
 	}
 	else
-	{
-    echo "<div class='alert alert-danger'><i class='fa-solid fa-triangle-exclamation'></i> <b>LaPduP</b> : Echec de connexion...</div>";
-	}
+    	echo "<div class='alert alert-danger'><i class='fa-solid fa-triangle-exclamation'></i> <b>LaPduP</b> : Echec de connexion...</div>";
 }
 ?>

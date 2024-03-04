@@ -49,47 +49,4 @@ function get_image($photo)
         echo "ERROR #001 : FILE IS NOT IMAGE <br>";
         return "error";
 }
-
-function menu($where){
-
-    $active_categorie = "text-white";
-    $active_employe = "text-white";
-    $active_affecter = "text-white";
-    if ($where == "categorie")
-        $active_categorie = "text-primary bg-white";
-    else if ($where == "employe")
-        $active_employe = "text-primary bg-white";
-    else if ($where == "affecter")
-        $active_affecter = "text-primary bg-white";
-        	
-    echo "<nav class=\"navbar navbar-expand-lg navbar-light bg-primary fixed-top\">
-    <div class=\"container-fluid\">
-        <img src=\"../images/logo_nbg.png\" width=\"60px\">
-        <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-            <span class=\"navbar-toggler-icon\"></span>
-        </button>
-        <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
-            <ul class=\"navbar-nav\">" ;
-        
-        echo "
-                <li class=\"nav-item\">
-                    <a class=\"nav-link   ".$active_categorie." \" href=\"../categorie/categorie-list.php\"><i class=\"fa-solid fa-city\"></i> Categories</a>
-                </li>
-                <li class=\"nav-item\">
-                    <a class=\"nav-link   ".$active_employe."  \" href=\"../employe/employe-list.php\"><i class=\"fa-solid fa-city\"></i>Employe</a>
-                </li>
-                <li class=\"nav-item\">
-                    <a class=\"nav-link   ".$active_affecter." \" href=\"../affecter/affecter-list.php\"><i class=\"fa-solid fa-city\"></i> Affecter</a>
-                </li>
-            </ul>";
-        echo "<ul class=\"navbar-nav ms-auto\">
-        <li class=\"nav-item\">
-            <a class=\"nav-link text-white\" href=\"../deconnexion.php\" ><i class=\"fa-solid fa-lock\"></i> Déconnexion</a>
-        </li>
-    </ul>
-</div>
-</div>
-</nav>";
-            
-}
 ?>

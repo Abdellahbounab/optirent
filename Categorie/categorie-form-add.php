@@ -1,7 +1,6 @@
 <?php
 	require("../head.php");
 	require("../fonctions.php");
-	menu("categorie");
 	require("../connexion.php");
 	$r = "select * from categorie";
 	$res = mysqli_query($con, $r);

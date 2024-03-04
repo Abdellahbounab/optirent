@@ -7,8 +7,10 @@
 	mysqli_close($con);
 	require("../head.php");
 	require("../fonctions.php");
-	menu("categorie");
 ?>
+<section class="home-section">
+    <div class="home-content">
+    
 <div class="container" style="margin-top:100px">
 <form method="POST" action="categorie-update.php">
 	<fieldset>
@@ -18,8 +20,10 @@
 		<input type="text" name="id" value="<?php echo $data['idc']; ?>" hidden>
 		<label>Titre Categorie</label>
 		<input type="text" name="titrec" value="<?php echo $data['titrec']; ?>" class="form-control">
-<button type="submit" class="btn btn-primary">
+		<button type="submit" class="btn btn-primary">
                 <i class="fas fa-save"></i> Enregistrer
             </button>	</fieldset>
 </form>
 </div>
+</div>
+  </section>

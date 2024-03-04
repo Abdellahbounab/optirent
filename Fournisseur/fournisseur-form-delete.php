@@ -1,6 +1,6 @@
 <?php
 	$id=$_GET['id'];
-	$r = "select * from categorie where idc = '".$id."'";
+	$r = "select * from fournisseur where idf = '".$id."'";
 	require("../connexion.php");
 	$res = mysqli_query($con, $r);
 	$data = mysqli_fetch_assoc($res);
@@ -9,16 +9,17 @@
 	require("../fonctions.php");
 ?>
 <div class="container" style="margin-top: 100px;">
-<form method="POST" action="#">
+<form method="POST">
 	<div class="row">
 		<div class="datadelete col-6">
 			<fieldset>
-				<legend>Categorie à supprimer</legend>
+				<legend>Fornisseur à supprimer</legend>
 				<label>Id Categorie</label>
-				<input type="text" name="idc" value="<?php echo $data['idc']; ?>" class="form-control" disabled>
-				<input type="text" name="id" value="<?php echo $data['idc']; ?>" hidden>
+				<input type="text" name="idf" value="<?php echo $data['idf']; ?>" class="form-control" disabled>
+				<input type="text" name="id" value="<?php echo $data['idf']; ?>" hidden>
 				<label>Titre Categorie</label>
-				<input type="text" name="titrec" value="<?php echo $data['titrec']; ?>" class="form-control" disabled>
+				<input type="text" name="nomf" value="<?php echo $data['nom']; ?>" class="form-control" disabled>
+				<a href="./fournisseur-list.php"><input type="button"  class="btn btn-secondary" value="Return"></a>
 			</fieldset>
 		</div>
 		<div class="cledelete col-6">
@@ -32,7 +33,7 @@
         <i class="fa-solid fa-triangle-exclamation"></i><br>Les données supprimées ne seront plus récupérables. Êtes-vous sûr de vouloir continuer ?
     </div>
     <button type="submit" class="btn btn-danger"><i class="fas fa-trash-can"></i> Supprimer </button>
-</div>
+	</div>
 
 		</div>
 	</div>
@@ -50,11 +51,11 @@
 		}
 		else
 		{
-			$r = "delete from categorie where idc = '".$id."'";
+			$r = "delete from fournisseur where idf = '".$id."'";
 			require("../connexion.php");
 			mysqli_query($con, $r);
 			mysqli_close($con);
-			redirection("categorie-list.php");
+			redirection("fournisseur-list.php");
 		}
 	}
 ?>

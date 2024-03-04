@@ -1,8 +1,7 @@
 <?php
 	extract($_POST);
 	$r = "update categorie
-	set idc = '".$idc."',
-	titrec = '".$titrec."'
+	set titrec = '".$titrec."'
 	where idc = '".$id."'";
 	require("../connexion.php");
 	mysqli_query($con, $r);

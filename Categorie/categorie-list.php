@@ -5,7 +5,6 @@ $r = "select * from categorie";
 $res = mysqli_query($con, $r);
 $nbr_service = mysqli_num_rows($res);
 require("../fonctions.php");
-menu("categorie");
 ?>
 <div class="container" style="margin-top: 100px;">
     <div class=entete-list>

@@ -4,7 +4,8 @@
 	require("../connexion.php");
 	$r = "select * from fournisseur";
 	$res = mysqli_query($con, $r);
-	$nbr_cat = mysqli_num_rows($res);
+	$nbr = mysqli_query($con ,"select idf from fournisseur order by idf desc limit 1;");
+	$nbr_cat = mysqli_fetch_assoc($nbr);
 ?>
 <div class="container" style="margin-top: 100px;">
 <form method="POST" action="fournisseur-add.php">
@@ -12,8 +13,8 @@
 		<legend>Formulaire Fournisseur</legend>
 		<div class="col-md-6">
 		<label>Id Fournisseur</label>
-		<input type="text" class="form-control" value =<?php echo ++$nbr_cat ;?> disabled>
-		<input type="text" name="idf" class="form-control" value =<?php echo $nbr_cat; ?> hidden>
+		<input type="text" class="form-control" value =<?php echo ++$nbr_cat['idf'] ;?> disabled>
+		<input type="text" name="idf" class="form-control" value =<?php echo $nbr_cat['idf']; ?> hidden>
 		<label>Nom <span class="obg">*</span></label>
 		<input type="text" name="nomf" class="form-control" require>
 		<label>Contact<span class="obg">*</span></label>

@@ -88,6 +88,7 @@ else
           <li><a class="link_name" href="#">Tables</a></li>
           <li><a href="../categorie/categorie-list.php">Categories</a></li>
           <li><a href="../fournisseur/fournisseur-list.php">Fournisseur</a></li>
+          <li><a href="../client/client-list.php">Client</a></li>
         </ul>
       </li>
       <li>

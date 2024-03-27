@@ -89,6 +89,8 @@ else
           <li><a href="../categorie/categorie-list.php">Categories</a></li>
           <li><a href="../fournisseur/fournisseur-list.php">Fournisseur</a></li>
           <li><a href="../client/client-list.php">Client</a></li>
+          <li><a href="../cabinet/cabinet-list.php">Cabinet</a></li>
+          <li><a href="../produit/produit-list.php">Produit</a></li>
         </ul>
       </li>
       <li>

@@ -1,7 +1,7 @@
 <?php
 	$id=$_GET['id'];
 	require("../connexion.php");
-	$res = mysqli_query($con, "select * from commande where idcommande = ".$id );
+	$res = mysqli_query($con, "select * from rendezvous where idrendezvous = ".$id );
 	$data = mysqli_fetch_assoc($res);
 	mysqli_close($con);
 	require("../head.php");
@@ -12,15 +12,15 @@
 	<div class="row">
 		<div class="datadelete col-6">
 			<fieldset>
-				<legend>Produit à supprimer</legend>
-				<label>Id Commande</label>
-				<input type="text" name="idcommande" value="<?php echo $data['idcommande']; ?>" class="form-control" disabled>
-				<input type="text" name="id" value="<?php echo $data['idcommande']; ?>" hidden>
+				<legend>Rendez-Vous à supprimer</legend>
+				<label>Id Rendez-Vous</label>
+				<input type="text" name="idrendezvous" value="<?php echo $data['idrendezvous']; ?>" class="form-control" disabled>
+				<input type="text" name="id" value="<?php echo $data['idrendezvous']; ?>" hidden>
 				<label>id Client</label>
-				<input type="text" name="nomp" value="<?php echo $data['idclient']; ?>" class="form-control" disabled>
-				<label>Id Produit</label>
-				<input type="text" name="nomp" value="<?php echo $data['idproduit']; ?>" class="form-control" disabled>
-				<a href="./commande-list.php"><input type="button"  class="btn btn-secondary" value="Return"></a>
+				<input type="text" value="<?php echo $data['idclient']; ?>" class="form-control" disabled>
+				<label>Id Cabinet</label>
+				<input type="text" value="<?php echo $data['idcabinet']; ?>" class="form-control" disabled>
+				<a href="./rendezvous-list.php"><input type="button"  class="btn btn-secondary" value="Return"></a>
 			</fieldset>
 		</div>
 		<div class="cledelete col-6">
@@ -52,11 +52,11 @@
 		}
 		else
 		{
-			$r = "delete from commande where idcommande = '".$id."'";
+			$r = "delete from rendezvous where idrendezvous = '".$id."'";
 			require("../connexion.php");
 			mysqli_query($con, $r);
 			mysqli_close($con);
-			redirection("commande-list.php");
+			redirection("rendezvous-list.php");
 		}
 	}
 ?>

@@ -1,13 +1,15 @@
 <?php
 	extract($_POST);
-	$r = "insert into commande 
-	values (".$idc.",
-	'".$datec."', 
+	$r = "insert into rendezvous 
+	values (".$idr.",
+	'".$dater."',
+	'".$timer."',
 	'".$idclient."', 
-	'".$idproduit."', 
-	'".$statut."')";
+	'".$idcabinet."', 
+	'".$notes."', 
+	'".$ncr."')";
 	require("../connexion.php");
 	mysqli_query($con, $r);
 	require("../fonctions.php");
-	redirection("commande-list.php");
+	redirection("rendezvous-list.php");
 ?>

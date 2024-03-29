@@ -1,13 +1,15 @@
 <?php
 	extract($_POST);
-	$r = "update commande
+	$r = "update rendezvous
 	set idclient = '".$idl."'
-	, idproduit = '".$idproduit."'
-	, datecommande = '".$datec."'
-	, statut = '".$statut."'
-	where idcommande = ".$id;
+	, idcabinet = '".$idcabinet."'
+	, daterendezvous = '".$dater."'
+	, heurerendezvous = '".$timer."'
+	, notes = '".$notes."'
+	, niveaudecredibilite = '".$niveaudecredibilite."'
+	where idrendezvous = ".$id;
 	require("../connexion.php");
 	mysqli_query($con, $r);
 	require("../fonctions.php");
-	redirection("commande-list.php");
+	redirection("rendezvous-list.php");
 ?>

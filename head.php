@@ -91,6 +91,8 @@ else
           <li><a href="../client/client-list.php">Client</a></li>
           <li><a href="../cabinet/cabinet-list.php">Cabinet</a></li>
           <li><a href="../produit/produit-list.php">Produit</a></li>
+          <li><a href="../commande/commande-list.php">Commande</a></li>
+          <li><a href="../rendezvous/rendezvous-list.php">Rendez Vous</a></li>
         </ul>
       </li>
       <li>
